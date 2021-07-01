@@ -1,0 +1,205 @@
+<html>
+<head>
+
+	<style type="text/css">
+	body {
+    text-align: center;
+}
+
+body, html {
+    background-attachment: fixed ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+#novelDiv {
+    width: 1023px;
+    height: 575px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+}
+#background0 {
+	width: 1023px;
+	height: 575px;
+	}
+
+#dialogDiv {
+    font-family: "Deja Vu Sans", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    font-color:black;
+    position: absolute;
+    width: 1014px;
+    height: 140px;
+    top: 426px;
+    left: 0;
+    padding: 5px;
+    background-color: #f5f7ed;
+    color: white;
+    text-align: left;
+    filter: alpha(opacity=75);
+    opacity: 0.45;
+
+}
+
+#demo{
+	    position: absolute;
+	    font-size: 25px;
+    	top: 450px;
+    	font-color:black;
+
+}
+
+#button1{
+	position:absolute;
+	top:380px;
+	right:20px;
+	width: 17%;
+	height: 13%;
+	z-index:100;
+}
+
+#next{
+	position:absolute;
+	top:740px;
+	left:925;
+	width: 27%;
+	height: 23%;
+	z-index:100;
+}
+
+#siti1{
+
+	height: 60%;
+	width: 30%;
+}
+
+.gbr {
+				padding: 0.5em 3em;
+				width: 15%;
+				height: 15%;
+
+}
+
+.menuItem {
+		font-family: "Century Gothic", Helvetica, Arial, sans-serif;
+		font-size: 18px;
+		background-color: #0050a0;
+		color: white;
+		text-align: center;
+		width: 75%;
+		margin: 0.5em auto;
+		padding: 0.5em 3em;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+
+
+}
+
+#myVideo {
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
+
+#decorative {
+	 position: absolute;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
+
+#logo{
+	position:absolute;
+	top:750px;
+	right:1200px;
+	width: 17%;
+	height: 13%;
+}
+}
+
+
+.menuItem:hover{
+	background-color: #ff8c00;
+}
+
+	
+	</style>
+	<title>Siti's Wardrobe</title>
+			<a href="mainmenu.html">
+  			<img border="0" id="logo" src="logo.png"></a>
+	<video autoplay muted loop id="myVideo">
+    <source src="pastel.mp4" type="video/mp4">
+	</video>
+	<body onload="iniNovel(800,600);">
+	<img id= "decorative" src="bg2.png">
+	<div id="novelDiv">
+		<div style="position: absolute;
+					left:0; top: 0; z-index:-1">
+					<img id="background0" src="street2.png">
+
+		</div>
+				<div id="demo">
+				<p>"Siti adalah gadis yang selalu ditimpa musibah sejak kecil, dia sangat cantik dan rajin menabung, tetapi tabungan nya selalu dihabiskan oleh kakak tirinya, di usia nya yang ke 17, dia ingin memanfaatkan kecantikannya untuk menjadi model di majalah remaja."</p>
+				</div>
+				
+
+				<div id="dialogDiv" style="z-index:100">
+				</div>
+
+
+  			<input type="image" id="button1" onclick= "loadDoc()" src="btn9.png" />
+  			<a href="dress up.html">
+  			<img border="0" id="next" src="btn10.png"></a>
+
+			<audio autoplay="autoplay">
+		     <source src="bg.mp3" />
+ </audio>
+	</body>
+	<script>
+
+		
+
+
+
+	function refreshthispage() 
+	{
+		location.reload();
+	}
+
+
+	function loadDoc() {
+  	var xhttp = new XMLHttpRequest();
+  	xhttp.onreadystatechange = function() 
+  	{
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  	};
+  xhttp.open("GET","siti.txt", true);
+  xhttp.send();
+	}
+
+
+	
+	
+
+
+
+	</script>
+	</head>
+</html>

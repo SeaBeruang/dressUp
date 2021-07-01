@@ -1,0 +1,93 @@
+<html>
+<head>
+
+	<style type="text/css">
+	body {
+    
+}
+
+body, html {
+    background-attachment: fixed ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+	text-align: center;
+}
+
+
+
+
+#myVideo {
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
+
+#decorative {
+	 position: absolute;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
+
+#logo{
+
+	width: 800px;
+	height: 350px;
+}
+
+#option{
+	position:absolute;
+	top: 500px;
+	left: 650px;
+}
+
+	
+
+}
+
+	
+	</style>
+	<title>Siti's Wardrobe</title>
+	<video autoplay muted loop id="myVideo">
+    <source src="pastel.mp4" type="video/mp4">
+	</video>
+	<img id= "decorative" src="bg2.png">
+	<img id= "logo" src="logo.png">
+
+	<div id="option">
+	<a href="iniNovel.html">
+  			<img border="0" id="button1" src="btn12.png"></a>
+
+  	<a href="dress up.html">
+  			<img border="0" id="button2" src="btn10.png"></a>
+  	</div>
+			<audio autoplay="autoplay">
+		     <source src="menu.mp3" />
+ </audio>
+	</body>
+	<script>
+
+
+	function refreshthispage() 
+	{
+		location.reload();
+	}
+
+	myAudio = new Audio('bg3.mp3'); 
+myAudio.addEventListener('ended', function() {
+    this.play();
+}, true);
+myAudio.play();
+	</script>
+	</head>
+</html>
