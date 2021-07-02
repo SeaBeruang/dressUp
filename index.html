@@ -1,0 +1,303 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+
+
+#myVideo {
+  position: fixed;
+  right: 0; 
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto; 
+  height: auto;
+  z-index: -100;
+}
+
+
+img {
+	position: absolute;
+	margin-left: 15%;
+display:inline-block;
+  height:100%;
+}
+
+
+button{
+  margin-top:20%;
+}
+
+ul{
+	list-style-type: none;
+	display:inline-block;
+}
+
+
+character{
+z-index: -500;   
+}
+
+.shirt{
+	visibility:hidden;
+  z-index: 1;
+}
+
+.eye{
+	top: 29%;
+	left: 41.5%;
+	visibility:hidden;
+  	z-index: 3;
+	width: 11%;
+	height: 12%;
+	}
+
+.hair{
+	visibility:hidden;
+	z-index:4;
+
+	}
+
+.brow{
+	top: 29%;
+	left: 41.5%;
+	visibility:hidden;
+  	z-index: 5;
+	width: 11%;
+	height: 12%;
+
+	}
+
+.bg{
+	visibility:hidden;
+	z-index: -50;
+
+	}
+
+.mouth{
+	top: 32%;
+	left: 41.5%;
+	visibility:hidden;
+  	z-index: 5;
+	width: 11%;
+	height: 12%;
+	transform: rotate(-24deg);
+}
+
+#eye_button, #shirt_button, #hair_button, #bg_button, #brow_button, #mouth_button, #resfresh_button{
+	width: 85%;
+	height: 11%;
+}
+
+#logo{
+	left:1250px;
+	width: 17%;
+	height: 13%;
+}
+
+
+</style>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+<title>Siti's Wardrobe</title>
+
+
+</head>
+
+<body>
+
+	<video autoplay muted loop id="myVideo">
+    <source src="pastel.mp4" type="video/mp4">
+	</video>
+
+<ul>
+  <li><input type="image"  id="eye_button" src="btn2.png" /></li>
+  <li><input type="image"  id="shirt_button" src="btn1.png" /></li>
+  <li><input type="image"  id="hair_button" src="btn3.png" /></li>
+  <li><input type="image"  id="bg_button" src="btn4.png" /></li>
+  <li><input type="image"  id="brow_button" src="btn6.png" /></li>
+  <li><input type="image"  id="mouth_button" src="btn7.png" /></li>
+  <li><input type="image"  id="resfresh_button" onclick= "refreshthispage()" src="btn8.png" /></li>
+  <a href="mainmenu.html">
+  <img border="0" id="logo" src="logo.png"></a>
+
+
+</li>
+
+</li>
+
+</ul>
+
+<img id="character" src="1.png" /> 
+
+<img id="top1" class="shirt" src="2.png" />
+
+  <img id="top2" class="shirt" src="3.png" />
+
+  <img id="top3" class="shirt" src="4.png" />
+
+  <img id="top4" class="shirt" src="5.png" />
+
+  <img id="top5" class="shirt" src="6.png" />
+
+  <img id="top6" class="shirt" src="7.png" />
+
+  <img id="top7" class="shirt" src="8.png" />
+
+
+
+<img id="bottom1" class="eye" src="eye.png" />
+
+<img id="bottom2" class="eye" src="eye1.png" />
+
+<img id="bottom3" class="eye" src="eye2.png" />
+
+<img id="bottom4" class="eye" src="eye3.png" />
+
+<img id="bottom5" class="eye" src="eye4.png" />
+
+<img id="bottom6" class="eye" src="eye5.png" />
+
+<img id="bottom7" class="eye" src="eye6.png" />
+
+<img id="bottom8" class="eye" src="eye7.png" />
+
+
+
+<img id="hair1" class="hair" src="hair.png" />
+
+<img id="hair2" class="hair" src="hair2.png" />
+
+<img id="hair3" class="hair" src="hair3.png" />
+
+<img id="hair4" class="hair" src="hair4.png" />
+
+<img id="hair5" class="hair" src="hair5.png" />
+
+<img id="hair6" class="hair" src="hair6.png" />
+
+<img id="hair7" class="hair" src="hair7.png" />
+
+
+
+<img id="brow1" class="brow" src="brow1.png" />
+
+<img id="brow2" class="brow" src="brow2.png" />
+
+<img id="brow3" class="brow" src="brow3.png" />
+
+<img id="brow4" class="brow" src="brow4.png" />
+
+
+
+<img id="mouth1" class="mouth" src="mouth1.png" />
+
+<img id="mouth2" class="mouth" src="mouth2.png" />
+
+<img id="mouth3" class="mouth" src="mouth3.png" />
+
+<img id="mouth4" class="mouth" src="mouth4.png" />
+
+<img id="mouth5" class="mouth" src="mouth5.png" />
+
+<img id="mouth6" class="mouth" src="mouth6.png" />
+
+<img id="mouth7" class="mouth" src="mouth7.png" />
+
+
+
+
+<img id="bg1" class="bg" src="bg_1.png" />
+
+<img id="bg2" class="bg" src="bg_2.png" />
+
+<img id="bg3" class="bg" src="bg_3.png" />
+
+<img id="bg4" class="bg" src="bg_4.png" />
+
+<img id="bg5" class="bg" src="bg_5.png" />
+
+<img id="bg6" class="bg" src="bg_6.png" />
+
+<img id="bg7" class="bg" src="bg_7.png" />
+
+<img id="bg8" class="bg" src="bg_8.png" />
+
+<img id="bg9" class="bg" src="bg_9.png" />
+
+<img id="bg10" class="bg" src="bg_10.png" />
+
+<img id="bg11" class="bg" src="bg_11.png" />
+
+<img id="bg12" class="bg" src="bg_12.png" />
+
+</body>
+<script>
+$(document).ready(function(){
+
+function ImageSwitcher(choices, i) {
+	i = 0;
+	
+	this.Next = function() {
+		hide_current_image();
+		show_next_image();
+	}
+	
+	var hide_current_image = function() {
+		if(choices){
+			choices[i].style.visibility = "hidden";
+			i += 1;
+		}
+	}
+	var show_next_image = function() {
+		if(choices){
+			if(i == (choices.length)) {
+				i = 0;
+			}
+			choices[i].style.visibility = "visible";
+		}
+	}
+}
+  
+    var eyes = $(".eye");
+	var shirts = $(".shirt");
+	var backgrounds = $(".bg");
+	var hairs = $(".hair");
+	var brows = $(".brow");
+	var mouths = $(".mouth");
+
+
+	var shirt_picker = new ImageSwitcher(shirts);
+	document.getElementById("shirt_button").onclick = function() { shirt_picker.Next(); };
+	
+	var eyes_picker = new ImageSwitcher(eyes);
+	document.getElementById("eye_button").onclick = function() {eyes_picker.Next(); };
+	
+	var bg_picker = new ImageSwitcher(backgrounds);
+	document.getElementById("bg_button").onclick = function() {bg_picker.Next(); };
+
+	var hairs_picker = new ImageSwitcher(hairs);
+	document.getElementById("hair_button").onclick = function() {hairs_picker.Next(); };
+
+	var brows_picker = new ImageSwitcher(brows);
+	document.getElementById("brow_button").onclick = function() {brows_picker.Next(); };
+
+	var mouths_picker = new ImageSwitcher(mouths);
+	document.getElementById("mouth_button").onclick = function() {mouths_picker.Next(); };
+
+
+
+});
+
+myAudio = new Audio('musicbox.mp3'); 
+myAudio.addEventListener('ended', function() {
+    this.play();
+}, true);
+myAudio.play();
+
+
+function refreshthispage() 
+	{
+		location.reload();
+	}
+
+  </script>
+</html>
